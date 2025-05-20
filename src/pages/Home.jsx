@@ -4,7 +4,6 @@ import UserContent from '../components/UserContent';
 import Form from '../components/Form';
 import Modal from '../components/Modal';
 import Pagination from '../components/Pagination';
-import ThemeToggle from '../components/ThemeToggle';
 import Loading from '../components/Loading';
 import { useModal } from '../hooks/useModal';
 import { usePagination } from '../hooks/usePagination';
