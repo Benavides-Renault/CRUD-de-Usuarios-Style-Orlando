@@ -1,0 +1,133 @@
+:root {
+	--bg-color: #242424;
+	--fg-color: rgba(255, 255, 255, 0.87);
+	--btn-bg: #1a1a1a;
+	--btn-fg: #fff;
+	--accent: #646cff;
+	--accent-hover: #535bf2;
+	--outline: #4c6ef5;
+}
+
+body.light {
+	--bg-color: #f8f9fa;
+	--fg-color: #222;
+	--btn-bg: #dee2e6;
+	--btn-fg: #000;
+	--accent: #4c6ef5;
+	--accent-hover: #364fc7;
+	--outline: #4c6ef5;
+}
+
+body.party-mode {
+	--bg-color: #fffb00;
+	--fg-color: #ff00f2;
+	--btn-bg: #00ffff;
+	--btn-fg: #000;
+	--accent: #ff00ff;
+	--accent-hover: #00ff2a;
+
+	background-image: repeating-linear-gradient(
+		45deg,
+		#ff00f2,
+		#ff00f2 10px,
+		#00ffff 10px,
+		#00ffff 20px
+	);
+	animation: rave 0.3s infinite linear;
+}
+
+@keyframes rave {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	background-attachment: fixed;
+	animation: fadeInBody 0.5s ease-out;
+}
+
+@keyframes fadeInBody {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+a {
+	font-weight: 500;
+	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	color: var(--accent-hover);
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button,
+input[type='submit'] {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	color: var(--btn-fg);
+	background-color: var(--btn-bg);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 5px transparent;
+}
+
+button:hover,
+input[type='submit']:hover {
+	border-color: var(--accent);
+	box-shadow: 0 0 10px var(--accent-hover);
+}
+
+button:focus,
+input[type='submit']:focus,
+button:focus-visible,
+input[type='submit']:focus-visible {
+	outline: 3px solid var(--outline);
+	outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: var(--btn-bg);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--accent-hover);
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accent);
+}

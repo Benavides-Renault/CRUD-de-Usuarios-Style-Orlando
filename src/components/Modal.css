@@ -1,0 +1,60 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+	display: grid;
+	place-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.show-modal {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-content {
+	background-color: #1e1e1e;
+	padding: 1.5em;
+	border-radius: 1em;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	min-width: 320px;
+	max-width: 600px;
+	width: 90%;
+	color: white;
+}
+
+.modal-create {
+	animation: slideFromBottom 0.4s ease-out forwards;
+}
+
+@keyframes slideFromBottom {
+	from {
+		transform: translateY(60px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.modal-edit {
+	animation: slideFromLeft 0.4s ease-out forwards;
+}
+
+@keyframes slideFromLeft {
+	from {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

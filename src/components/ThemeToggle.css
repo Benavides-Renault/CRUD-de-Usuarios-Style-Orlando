@@ -1,0 +1,16 @@
+.theme-toggle {
+	background-color: transparent;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	border-radius: 20px;
+	padding: 0.4em 1em;
+	cursor: pointer;
+	font-size: 0.9em;
+	transition: all 0.3s ease;
+	margin-right: 10px;
+}
+
+.theme-toggle:hover {
+	background-color: var(--accent);
+	color: white;
+}
